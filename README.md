@@ -18,12 +18,21 @@ python json_toolkit.py
 On Windows you can use `py` instead of `python`; on macOS/Linux you may need `python3`.
 If Tkinter is unavailable, the terminal commands still work.
 
+## Desktop design
+
+The desktop workspace uses a midnight palette with blue accents, syntax highlighting, line numbers, live document counts, adjustable side-by-side editors, and colored comparison results.
+
+- **Copy result** copies the right editor to the clipboard.
+- **Ctrl+O** opens a file, **Ctrl+Enter** formats, and **Ctrl+S** saves the result.
+- Validation errors appear in the status area without interrupting editing.
+- Highlighting is disabled above 150,000 characters to keep larger documents responsive.
+
 ## Desktop workflow
 
 - Paste JSON into the left editor, or choose **Open**.
 - **Validate** checks syntax, duplicate keys, and invalid constants.
 - **Format**, **Minify**, or **Sort keys** writes the result to the right editor.
-- **Save output** exports the right editor to a file; the file picker asks before overwriting.
+- **Save result** exports the right editor to a file; the file picker asks before overwriting.
 - To **Compare**, paste the second JSON document into the right editor. A separate window shows the differences without replacing either document.
 
 JSON syntax errors include the line and column. Duplicate-key errors identify the key.
